@@ -1,0 +1,355 @@
+{
+    "InputDataType": "Excel",
+    "ValidateLinks": false,
+    "ExcelFileName": "WW1 Fallen Updated For New Wesite 20230825.xlsx",
+    "ExcelSpreadsheetName": "Database",
+    "ExcelFirstRow": 2,
+
+    "Name": "World War One Fallen",
+    "Columns": [
+        {  
+            "Name": "Decoration",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "ConvertToUpperCase": true,
+            "Input": true,
+            "Output": true,
+            "Filtered": true,
+            "Messages": [
+                "E:the decoration is unknown, it should be 'CDG', 'MID or 'MM'"
+            ],
+            "Lookups": [
+                " CDG : Croix De Guerre ",
+                "MID:Mentioned in Dispatches",
+                "MM:Military Medal"
+            ]
+        },
+        {
+            "Name": "Id",
+            "DataType": "Integer",
+            "DataTypeInput": "Integer",
+            "Mandatory": true,
+            "Unique": true,
+            "Input": true,
+            "Output": true,
+            "Messages": [],
+            "Lookups": [],
+            "SpecialColumnType": "Identity"
+        },
+        {
+            "Name": "Rank", 
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "Surname",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "AlternateSurname",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "FirstNames",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "AlternateFirstNames",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "ServiceNumber",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Unique": true,
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "Age",
+            "DataType": "Integer",
+            "DataTypeInput": "Integer",
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "Battallion",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "Regiment",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "HouseNumber",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true
+        },
+        {
+            "Name": "HouseName",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true
+        },
+        {
+            "Name": "Street",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "Town",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true
+        },
+        {
+            "Name": "Family",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": false,
+            "Output": false
+        },
+        {
+            "Name": "DateOfDeath",
+            "DataType": "Date",
+            "DataTypeInput": "ExcelDateShort",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true,
+            "Filtered": true,
+            "FormatStringOut": "dd MMM yyyy"
+        },
+        {
+            "Name": "CemeteryMemorialDetail",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "Memorial",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "Cemetery",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "CemeteryMemorialArea",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "CemeteryMemorialCountry",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "Notes",
+            "DataType": "String",
+            "DataTypeInput": "String"
+        },
+        {
+            "Name": "CrossLaid",
+            "DataType": "String",
+            "DataTypeInput": "String"
+        },
+        {
+            "Name": "CWGCLink",
+            "DataType": "Link",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true,
+            "Messages": [
+                "E:the cwgc link is invalid"
+            ]
+        },
+        {
+            "Name": "InscriptionRequested",
+            "DataType": "String",
+            "DataTypeInput": "String"
+        },
+        {
+            "Name": "AttestationDocumentAddress",
+            "DataType": "String",
+            "DataTypeInput": "String"
+        },
+        {
+            "Name": "1911CensusAddress",
+            "DataType": "String",
+            "DataTypeInput": "String"
+        },
+        {
+            "Name": "LivingFamily",
+            "DataType": "String",
+            "DataTypeInput": "String"
+        },
+        {
+            "Name": "Tags",
+            "DataType": "Tags",
+            "DataTypeInput": "String",
+            "Input": true,
+            "Output": true,
+            "Filtered": true
+        },
+        {
+            "Name": "Latitude",
+            "DataType": "Double",
+            "DataTypeInput": "FloatingPoint",
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "Longitude",
+            "DataType": "Double",
+            "DataTypeInput": "FloatingPoint",
+            "Input": true,
+            "Output": true
+        },
+        {
+            "Name": "Address",
+            "DataType": "String",
+            "DataTypeInput": "String",
+            "Mandatory": true,
+            "Input": true,
+            "Output": true
+        }
+    ],
+
+    "Validators": [
+        {
+            "Name": "CemeteryOrMemorial",
+            "Columns": ["Cemetery","Memorial"],
+            "ValidateFunction": "ValidateCemeteryAndMemorial",
+            "Messages": [
+                "E:if a cemetery is specified a memorial must not be specified",
+                "E:if a memorial is specified a cemetery must not be specified",
+                "E:a cemetery or memorial must be specified"
+            ]
+        },
+
+        {
+            "Name": "LatitudeAndLongitude",
+            "Columns": ["Latitude","Longitude"],
+            "ValidateFunction": "ValidateLatidudeAndLongitide",
+            "Messages": [
+                "E:if a latitude is specified a longitude must also be specified, and vice-versa"
+            ]
+        }     
+    ],
+
+    "Groups": [
+        {
+            "Name": "CemeteryOrMemorialLocation",
+            "DataType": "String",
+            "Mandatory": true,
+            "Output": true,
+            "Filtered": true,
+            "Columns": ["CemeteryMemorialCountry", "CemeteryMemorialArea"],
+            "Messages": [
+                "E:a 'CemeteryMemorialCountry' and a 'CemeteryMemorialArea' must be specified"
+            ]
+        },
+
+        {
+            "Name": "CemeteryPosition",
+            "DataType": "String",
+            "Output": true,
+            "Columns": ["Cemetery", "CemeteryMemorialDetail"],
+        },
+        
+        {
+            "Name": "MemorialPosition",
+            "DataType": "String",
+            "Output": true,
+            "Columns": ["Memorial", "CemeteryMemorialDetail"],
+        },
+             
+        {
+            "Name": "FullName",
+            "DataType": "String",
+            "Columns": ["FirstNames", "Surname"],
+        },
+  
+        {
+            "Name": "Title",
+            "DataType": "String",
+            "Output": true,
+            "Columns": ["Rank", "FullName"],
+            "SpecialColumnType": "Title",
+            "Unique": true
+        },
+        
+        {
+            "Name": "Description",
+            "DataType": "String",
+            "Output": true,
+            "Columns": ["Title", "Regiment", "DateOfDeath", "Address"],
+            "SpecialColumnType": "Description",
+            "Unique": true
+        },
+        
+        {
+            "Name": "FallenUrlPath",
+            "DataType": "String",
+            "Unique": true,
+            "Output": true,
+            "Columns": ["Surname", "FirstNames", "Rank"],
+        },
+        
+        {
+            "Name": "FallenDirectory",
+            "DataType": "String",
+            "Mandatory": true,
+            "Unique": true,
+            "Output": true,
+            "Columns": ["Surname", "FirstNames", "Rank"],
+        }
+    ]
+}

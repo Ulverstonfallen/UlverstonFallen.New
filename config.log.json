@@ -1,0 +1,29 @@
+{ 
+  "LogLevel": {
+    "default": "debug",
+    "securso": "debug",
+    "system": "error",
+    "microsoft": "error",
+    "microsoft.aspnetcore.hosting.diagnostics": "trace"
+  },
+  
+  "ProviderFile.LocalTextFile": {
+    "ExcludeScopes": false,
+    "DoNotLogPersonalInfo": false,
+    "CompressJson": false,
+    "FileBufferSize": 4096,
+    "FileDirectory": "c:\\logs\\UlverstonFallen",
+    "FileInitialSizeInKB": 128,
+    "FileMaximumSizeInKB": 128,
+    "FileName": "log",
+    "FlushPeriodSecs": 60,
+    "FormatAsJson": false, 
+    "LogLevel": {
+      "default": "debug",
+      "websitegenerator": "debug",      
+      "httprequest": "debug",
+      "microsof": "warning",
+      "microsoft.aspnetcore.hosting.diagnostics": "warning"
+    }
+  }
+}

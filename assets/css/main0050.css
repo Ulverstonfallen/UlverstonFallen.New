@@ -91,6 +91,10 @@ a:active {
     text-decoration: none;
 }
 
+.clear-both {
+    clear: both;
+}
+
 /* ------------------------------------------------------------------ */
 
 .container {
@@ -118,31 +122,53 @@ a:active {
     flex-direction: column;
 }
 
-.container .main-area-post-top {
+.container .main-area-post-left {
     flex: 0 0 auto;
     margin: 0;
     border: 0;
-    border-bottom: 1px solid rgb(200, 200, 200);
-    padding: 0 0 0.5em 0;
-    width: 100%;
+    padding: 0 0 0 0;
 }
 
-.container .main-area-post {
+.container .main-area-post-centre {
     flex: 0 0 auto;
     margin: 0;
     border: 0;
-    padding: 2.0em 0 0 0;
+    padding: 0 0 0 0;
 }
 
-.container .main-area-post p {
+.container .main-area-post-centre h1 {
+    text-align: center;
+}
+.container .main-area-post-centre h2 {
+    text-align: center;
+}
+.container .main-area-post-centre h3 {
+    text-align: center;
+}
+.container .main-area-post-centre h4 {
+    text-align: center;
+}
+.container .main-area-post-centre h5 {
+    text-align: center;
+}
+.container .main-area-post-centre h6 {
     text-align: center;
 }
 
-.container .main-area-post p img {
+.container .main-area-post-centre p {
+    text-align: center;
+}
+
+.container .main-area-post-centre p img {
     text-align: center;
     max-width: 100%;
     height: auto;
     border: 1px solid black;
+}
+
+.container .main-area-post-centre .whoandwhen {
+    font-weight: lighter;
+    font-style: italic;
 }
 
 .container .main-area-post-bottom {
@@ -408,49 +434,89 @@ a:active {
 
 /* ------------------------------------------------------------------ */
 
-.main-area-article .post-summary-info {
-    padding: 0 0 0.25em 0;
+.main-area-article .post-summary-sp-float-left {
+    margin: 0.5em 0 0.5em 0;
+    border: 0;
+    padding: 0;
 }
 
-.main-area-article .post-summary-info p {
-    font-size: 0.9rem;
-    line-height: 1;
-}
-
-.main-area-article .post-summary-line {
+.main-area-article .post-summary-sp-float-left img {
     margin: 0;
     border: 0;
-    border-bottom: 1px solid rgb(200, 200, 200);
-    padding: 0 0 1.4em 0;
+    padding: 0.5em 0 0 0;
+    width: 100%;
 }
 
-@media (min-width: 600px) {
-    .main-area-article .post-summary-info p {
-        font-size: 1.0rem;
+.main-area-article .post-summary-sp-float-left p {
+    margin: 0;
+    border: 0;
+    padding: 0 0 0 0;
+}
+
+@media (min-width: 400px) {
+    .main-area-article .post-summary-sp-float-left img {
+        float: left;
+        width: 50%;
+        padding: 0.5em 1em 0 0;
+    }
+    .main-area-article .post-summary-sp-float-left p {
+        margin: 0;
+        border: 0;
+        padding: 0 0 0 0;
     }
 }
 
 /* ------------------------------------------------------------------ */
 
-.main-area-post-top > h1 {
-    text-align: center;
+.main-area-article .post-summary-basic {
+    margin: 0.5em 0 0.5em 0;
+    border: 0;
+    padding: 0;
 }
 
-.main-area-post-top > p {    
+.main-area-article .post-summary-basic p {
+    margin: 0;
+    border: 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+
+.main-area-article .post-summary-bottom {
+    margin: 0 0 0 0;
+    border: 0; 
+    padding: 0;
+    font-size: 0.9rem;
+    clear: both;
+}
+
+.main-area-article .post-summary-bottom p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+@media (min-width: 400px) {
+    .main-area-article .post-summary-bottom {
+        padding: 0;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+.main-area-article .post-summary-line {
     margin: 0.5em 0 0 0;
-    line-height: 1;
+    border: 0;
+    border-top: 1px solid rgb(200, 200, 200);
+    padding: 0;
 }
-.main-area-post-top > .main-area-post-top-left {    
-    float: none;
-    text-align: center;
-}
-.main-area-post-top > .main-area-post-top-right {   
-    float: none;
-    text-align: center;
-}
+
+/* ------------------------------------------------------------------ */
 
 .main-area-post-bottom { 
-    margin: 2em 0 0 0;
+    margin: 0 0 0 0;
 }
 .main-area-post-bottom > p {    
     margin: 0.4em 0 0 0;
@@ -459,18 +525,6 @@ a:active {
 }
 
 @media (min-width: 600px) {
-    .main-area-post-top > p {   
-        margin: 0.3em 0 0 0;  
-    }
-    .main-area-post-top > .main-area-post-top-left {  
-        float: left;
-        text-align: left;
-    }
-    .main-area-post-top > .main-area-post-top-right {   
-        float: right;
-        text-align: right;
-    }
-    
     .main-area-post-bottom > p {   
         margin: 0.3em 0 0 0; 
         font-size: 1.0rem;
