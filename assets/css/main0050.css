@@ -2,7 +2,7 @@
     font-size: 0.8rem;
     box-sizing: border-box;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     :root {
         font-size: 0.9rem;
     }
@@ -48,7 +48,7 @@ li {
     font-size: 1.1rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     body {
         line-height: 1.5;
     }
@@ -93,6 +93,10 @@ a:active {
 
 .clear-both {
     clear: both;
+}
+
+.text-centre {
+    text-align: center;
 }
 
 /* ------------------------------------------------------------------ */
@@ -187,7 +191,7 @@ a:active {
     width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .container {
         margin: 0.5em 0.5em 0.5em 0.5em;
     }
@@ -233,10 +237,10 @@ a:active {
     font-family: Arial, Helvetica, sans-serif;
     color: #ff1a1a;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .header-figure > figcaption {
         top: 15px;
         left: 15px;
@@ -276,7 +280,7 @@ a:active {
     font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .header-nav {
         margin: 0.5em 0 0.5em 0;
     }
@@ -312,7 +316,7 @@ a:active {
     font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .header-nav2 {
         margin: 0.75em 0 0.75em 0;
     }
@@ -346,7 +350,7 @@ a:active {
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .foot-text > p {
         font-size: 0.9rem;
     }    
@@ -390,7 +394,7 @@ a:active {
     font-weight: bold;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .foot-nav {
         margin: 0.75em 0 0.75em 0;
     }
@@ -422,7 +426,7 @@ a:active {
     line-height: 1.4;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .main-area-article ol {
         padding: 0 0 0 0.5em;
     }
@@ -434,37 +438,50 @@ a:active {
 
 /* ------------------------------------------------------------------ */
 
-.main-area-article .post-summary-sp-float-left {
-    margin: 0.5em 0 0.5em 0;
+.main-area-article .post-summary-photo {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-area-article .post-summary-photo .image {
+    flex: 100% 0 0;
+    margin: 0;
+    border: 0;
+    padding: 0.5em 0 0 0;
+}
+
+.main-area-article .post-summary-photo .image img{
+    width: 100%;
+}
+
+.main-area-article .post-summary-photo .text {
+    flex: 100% 0 0;
+    margin: 0;
     border: 0;
     padding: 0;
 }
 
-.main-area-article .post-summary-sp-float-left img {
-    margin: 0;
-    border: 0;
-    padding: 0.5em 0 0 0;
-    width: 100%;
-}
+@media (min-width: 500px) {
 
-.main-area-article .post-summary-sp-float-left p {
-    margin: 0;
-    border: 0;
-    padding: 0 0 0 0;
-}
-
-@media (min-width: 400px) {
-    .main-area-article .post-summary-sp-float-left img {
-        float: left;
-        width: 50%;
-        padding: 0.5em 1em 0 0;
+    .main-area-article .post-summary-photo {
+        align-items: center;
     }
-    .main-area-article .post-summary-sp-float-left p {
+    .main-area-article .post-summary-photo > .image {
+        flex: 35% 0 0;
         margin: 0;
         border: 0;
-        padding: 0 0 0 0;
+        padding: 1em 1em 0 0;
     }
-}
+    .main-area-article .post-summary-photo > .text {
+        flex: 65% 0 0;
+        margin: 0;
+        border: 1em 1em 0 1em;
+        padding: 0;
+    }
+} 
 
 /* ------------------------------------------------------------------ */
 
@@ -484,21 +501,18 @@ a:active {
 /* ------------------------------------------------------------------ */
 
 .main-area-article .post-summary-bottom {
-    margin: 0 0 0 0;
+    margin: 0;
     border: 0; 
     padding: 0;
-    font-size: 0.9rem;
-    clear: both;
 }
 
 .main-area-article .post-summary-bottom p {
     margin: 0;
     border: 0;
     padding: 0;
-    line-height: 1.4;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
     .main-area-article .post-summary-bottom {
         padding: 0;
     }
@@ -524,7 +538,7 @@ a:active {
     font-size: 0.9rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .main-area-post-bottom > p {   
         margin: 0.3em 0 0 0; 
         font-size: 1.0rem;
@@ -554,7 +568,7 @@ a:active {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .main-area-article .post-pages-nav > p > .post-pages-nav-item {
         padding: 0 .2em 0 .2em;
     }
@@ -584,9 +598,63 @@ a:active {
     border-right: 1px solid rgb(150, 150, 150);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .main-area-article .post-tags-nav p  {
         margin: 0 0 0.75em 0;
         padding: 0 .2em 0 .2em;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+.fallen-info {
+    margin: 0 0 1em 0;
+    border: 0;
+    border-bottom: 1px solid #29704a;
+    padding: 0 0 2em 0;
+}
+
+/* ------------------------------------------------------------------ */
+
+.roll-of-honour {
+    display: flex;
+    flex-wrap: wrap;
+}
+.roll-of-honour .roll-of-honour-individual {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+    border: 0;
+    padding: 0 1em 0 0;
+}
+
+@media screen and (min-width: 250px) {
+    .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 0;
+        padding: 0 1em 0 0;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 33%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 0;
+        padding: 0 1em 0 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 25%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 0;
+        padding: 0 1em 0 0;
     }
 }
