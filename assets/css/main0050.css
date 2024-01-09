@@ -99,6 +99,24 @@ a:active {
     text-align: center;
 }
 
+.no-java-script {
+    color: red;    
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.0em;
+    margin: 0 0 1em 0;
+    border: 1px solid red;
+    padding: 0;
+}
+
+.old-java-script-hide {
+    display: none;
+}
+
+.old-java-script-show {
+    display: block;
+}
+
 /* ------------------------------------------------------------------ */
 
 .container {
@@ -603,6 +621,16 @@ a:active {
         margin: 0 0 0.75em 0;
         padding: 0 .2em 0 .2em;
     }
+}
+
+/* ------------------------------------------------------------------ */
+
+.main-area-article .map-ww1 {
+    margin: 0;
+    border: 0;
+    border: 1px solid red;
+    padding: 0;
+    height: 400px;
 }
 
 /* ------------------------------------------------------------------ */
