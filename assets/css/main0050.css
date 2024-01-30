@@ -112,9 +112,31 @@ a:active {
 .old-java-script-hide {
     display: none;
 }
+.hidden {
+    display: none;
+}
 
 .old-java-script-show {
     display: block;
+}
+.visible {
+    display: block;
+}
+.xxximage-map-center {
+    max-width: 90%;
+    margin: 2em auto 2em auto;
+    border: 0;
+    border: 1px solid red;
+    padding: 0;
+}
+
+.xxxmage-map-center .xxxleaflet-map {
+    text-align: center;
+    max-width: 100%;
+    max-height: 90%;
+    margin: 0 auto 0 auto;
+    border: 1px solid green;
+    padding: 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -624,14 +646,14 @@ a:active {
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 .main-area-article .map-ww1 {
     margin: 0;
     border: 0;
     border: 1px solid red;
     padding: 0;
     height: 400px;
-}
+} */
 
 /* ------------------------------------------------------------------ */
 
@@ -686,3 +708,22 @@ a:active {
         padding: 0 1em 0 0;
     }
 }
+
+
+
+
+.ww1-map {
+    width: 860px;
+    height: 597px;
+    max-width: 98%;
+    margin: 0 auto 0 auto;
+    border: 1px solid #29704a;
+    padding: 0;
+    z-index: 1000; 
+}
+
+.ww1-map .ww1-map-inner{
+    width: 100%;
+    height: auto;
+}
+  
