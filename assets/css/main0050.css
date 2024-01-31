@@ -99,25 +99,8 @@ a:active {
     text-align: center;
 }
 
-.no-java-script {
-    color: red;    
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.0em;
-    margin: 0 0 1em 0;
-    border: 1px solid red;
-    padding: 0;
-}
-
-.old-java-script-hide {
-    display: none;
-}
 .hidden {
     display: none;
-}
-
-.old-java-script-show {
-    display: block;
 }
 .visible {
     display: block;

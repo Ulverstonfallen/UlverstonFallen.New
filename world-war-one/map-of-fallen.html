@@ -12,8 +12,6 @@
     <meta name="robots" content="noindex">
     <title>World War One Fallen</title>
     <meta name="description" content="Map showing where most of the World War One fallen lived."/>
-    <script type="module" src="/assets/js/dom.js"></script>
-    <script nomodule src="/assets/js/nomodule.js"></script>
 </head>
 
 <body>
@@ -50,33 +48,32 @@
 </header>     
 
 <article class="main-area-article">
-<div>
-    <noscript>
+<noscript>
 
-        <h1>Where the Fallen Lived</h1>
+    <h1>Where the Fallen Lived</h1>
+ 
+    <p>
+        Because Java Script has been disabled, full map functionality is not available. If you enable Java Script 
+        for this website, it will become available. You will then be able to zoom the map below in and out and view 
+        the details of the fallen person living at a given address. Further information about Java Script is 
+        available on our <a href="/info#java-script">info page</a>.
+    </p>
     
-        <p>
-            Because Java Script has been disabled, full map functionality is not available. If you enable Java Script for this website, 
-            you will be able to zoom in/out on the map below and click a poppy to view the full details of the person associated with 
-            it. Further information about Java Script is available on our <a href="/info#javaScript">info page</a>.
-        </p>
+    <div>
+        <img class="map-ww1-image" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
+    </div>
     
-        <div>
-            <img class="map-ww1-image" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
-        </div>
-    
-    </noscript>
-</div>
+</noscript>
 
 <div id="map-ww1-not-available" class="hidden">
 
     <h1>Where the Fallen Lived</h1>
     
     <p>
-        Because you are using an old browser (such as Internet Explorer) java script is not available; full map functionality is also not available. 
-        If you use a modern browser, java script will be available, and you will be able to zoom in/out on the map below and click a poppy to view 
-        the full details of the person associated with it. Further information about Java Script is available on our 
-        <a href="/info#javaScript">info page</a>.
+        Because you are using an old browser (such as Internet Explorer) full map functionality is not available. 
+        If you change to a modern browser (such as Chrome, Firefox or Edge), it will become available. You will then 
+        be able to zoom the map below in and out and view the details of the fallen person living at a given address. 
+        Further information about Java Script is available on our <a href="/info#java-script">info page</a>.
     </p>
     
     <div>
@@ -85,7 +82,7 @@
     
 </div>
 
-<div id="map-ww1-available" class="visible">
+<div id="map-ww1-available" class="hidden">
     <h1 id="where-the-fallen-of-ulverston-lived">Where the Fallen of Ulverston Lived</h1>
 
 <p>The poppies indicate the home of most of the fallen.</p>
@@ -118,22 +115,39 @@
 </footer>
             
 </div>
+
+<script nomodule>
+    window.nomodule = true;
+    eid = document.getElementById("map-ww1-not-available");
+    if (eid != null)
+    {
+        eid.className = "visible";
+    }
+
+</script>
    
 <link rel="stylesheet" href="/assets/css/leaflet-1-9-4.css" />
 <script src="/assets/js/leaflet-1-9-4.js"></script>
 <script>
-    var sw = L.latLng(54.188078, -3.118062);
-    var ne = L.latLng(54.204400, -3.078794);
-    var bounds = L.latLngBounds(sw, ne);
-    map = L.map('map', {
-        maxBounds: bounds, 
-        crs: L.CRS.EPSG3857,
-        centre: [54.196239, -3.098428],
-        minZoom: 15,
-        maxZoom: 18
-    });
-    L.tileLayer('/assets/images/map-ww1/{z}/{x}/{y}.jpg').addTo(map);
-    map.setView([54.196239, -3.098428], 15);
+    if (typeof window.nomodule ==="undefined") {
+        eid = document.getElementById("map-ww1-available");
+        if (eid != null)
+        {
+            eid.className = "visible";
+        }
+        var sw = L.latLng(54.188078, -3.118062);
+        var ne = L.latLng(54.204400, -3.078794);
+        var bounds = L.latLngBounds(sw, ne);
+        map = L.map('map', {
+            maxBounds: bounds, 
+            crs: L.CRS.EPSG3857,
+            centre: [54.196239, -3.098428],
+            minZoom: 15,
+            maxZoom: 18
+        });
+        L.tileLayer('/assets/images/map-ww1/{z}/{x}/{y}.jpg').addTo(map);
+        map.setView([54.196239, -3.098428], 15);
+    }
 </script>
 
 </body>
