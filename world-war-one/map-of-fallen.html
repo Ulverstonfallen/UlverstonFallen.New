@@ -1,29 +1,151 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/main0050.css">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta name="robots" content="noindex">
+    <title>World War One Fallen</title>
+    <meta name="description" content="Map showing where most of the World War One fallen lived."/>
+    <script type="module" src="/assets/js/dom.js"></script>
+    <script nomodule src="/assets/js/nomodule.js"></script>
 </head>
 
 <body>
-    <link rel="stylesheet" href="/assets/css/leaflet-1-9-4.css" />
-    <script src="/assets/js/leaflet-1-9-4.js"></script>
-     
-    <div id="map" style = "width: 950px; height: 661px; max-width: 97.5%; border: 1px solid green"></div>
-    <script>
-        var sw = L.latLng(54.188078, -3.118062);
-        var ne = L.latLng(54.204400, -3.078794);
-        var bounds = L.latLngBounds(sw, ne);
-        map = L.map('map', {
-            maxBounds: bounds, 
-            crs: L.CRS.EPSG3857,
-            centre: [54.196239, -3.098428],
-            minZoom: 15,
-            maxZoom: 18
-        });
-        L.tileLayer('/assets/images/map-ww1/{z}/{x}/{y}.jpg').addTo(map);
-        map.setView([54.196239, -3.098428], 15);
-    </script>
+<div class="container">
+    
+<header class="header-area">
+    <noscript>
+        <p class="no-java-script">Because Java Script has been disabled for this website a lot of its functionality is not available to you. 
+            This includes the ability to filter the fallen and the various maps. 
+            You might want to consider turning Java Script on.</p>
+    </noscript>
+    <div id="old-java-script" class="old-java-script-hide">
+        <p class="no-java-script">Because you are using an old browser (such as Internet Explorer), the website's Java Script is unable 
+            to run. A lot of its functionality is not available to you including the ability to filter the fallen and the various maps. 
+            You might want to consider using a more modern browser.</p>
+    </div>
+
+    <figure class="header-figure" >
+        <img src="/assets/images/headers/header1.jpg" alt="ulverston fallen header photograph"/> 
+        <figcaption>
+            
+                <span class="header-title-black">Ulverston Fallen : </span><span class="header-title-poppy-red">World War One</span>
+            
+        </figcaption>
+    </figure>
+
+    <nav class="header-nav">
+        <p><a class="" href="/">Home</a></p>
+        <p><a class="" href="/world-war-one/roll-of-honour">World War 1</a></p>
+        <p><a class="" href="/world-war-two/roll-of-honour">World War 2</a></p>
+        <p><a class="" href="/blog">Blog</a></p>
+        <p><a class="" href="/events">Events</a></p>
+    </nav>
+
+    
+        <nav class="header-nav2">
+            <p><a class="header-nav-item " href="/world-war-one/roll-of-honour">Roll Of Honour</a></p>
+            <p><a class="header-nav-item header-nav-item-cur" href="/world-war-one/map-of-fallen">Map</a></p>
+            <p><a class="header-nav-item " href="/world-war-one/2018-exhibition">2018 Exhibition</a></p>
+        </nav>
+   
+
+   
+
+</header>     
+
+<article class="main-area-article">
+<div>
+    <noscript>
+
+        <h1>Where the Fallen Lived</h1>
+    
+        <p>
+            Because Java Script has been disabled, full map functionality is not available. If you enable Java Script for this website, 
+            you will be able to zoom in/out on the map below and click a poppy to view the full details of the person associated with 
+            it. Further information about Java Script is available on our <a href="/info#javaScript">info page</a>.
+        </p>
+    
+        <div>
+            <img class="map-ww1-image" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
+        </div>
+    
+    </noscript>
+</div>
+
+<div id="map-ww1-not-available" class="hidden">
+
+    <h1>Where the Fallen Lived</h1>
+    
+    <p>
+        Because you are using an old browser (such as Internet Explorer) java script is not available; full map functionality is also not available. 
+        If you use a modern browser, java script will be available, and you will be able to zoom in/out on the map below and click a poppy to view 
+        the full details of the person associated with it. Further information about Java Script is available on our 
+        <a href="/info#javaScript">info page</a>.
+    </p>
+    
+    <div>
+        <img class="map-ww1-image" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
+    </div>
+    
+</div>
+
+<div id="map-ww1-available" class="visible">
+    <h1 id="where-the-fallen-of-ulverston-lived">Where the Fallen of Ulverston Lived</h1>
+
+<p>The poppies indicate the home of most of the fallen.</p>
+
+<p>This zoomable map has not been filtered. Not all the listed fallen have an address that appears on the map.</p>
+
+<div id="map" class="map-ww1"></div>
+
+<p>Reproduced with the permission of the <a href="https://maps.nls.uk/index.html">National Library of Scotland</a>.</p>
+
+</div>
+</article>
+
+<footer class="footer-area">
+    <div class="foot-text">
+        <p class="foot-text-left">Copyright © 2023 Janet Eglin. All Rights Reserved</p>
+        <p class="foot-text-right">Built With <a href="https://jekyllrb.com/">Jekyll</a>; Hosted By <a href="https://pages.github.com/">GitHub Pages</a></p>
+    </div>
+    <div class="foot-nav">
+        <p><a class="foot-nav-item " href="/">Home</a></p>
+        <p><a class="foot-nav-item " href="/world-war-one/roll-of-honour">World War One</a></p>
+        <p><a class="foot-nav-item " href="/world-war-two/roll-of-honour">World War Two</a></p>
+        <p><a class="foot-nav-item " href="/blog">Blog</a></p>
+        <p><a class="foot-nav-item " href="/blog/tags">Tags</a></p>
+        <p><a class="foot-nav-item " href="/gallery">Gallery</a></p>
+        <p><a class="foot-nav-item " href="/events">Events</a></p>
+        <p><a class="foot-nav-item " href="/contact-me">Contact</a></p>
+        <p><a class="foot-nav-item " href="/info">Info</a></p>           
+    </div>
+</footer>
+            
+</div>
+   
+<link rel="stylesheet" href="/assets/css/leaflet-1-9-4.css" />
+<script src="/assets/js/leaflet-1-9-4.js"></script>
+<script>
+    var sw = L.latLng(54.188078, -3.118062);
+    var ne = L.latLng(54.204400, -3.078794);
+    var bounds = L.latLngBounds(sw, ne);
+    map = L.map('map', {
+        maxBounds: bounds, 
+        crs: L.CRS.EPSG3857,
+        centre: [54.196239, -3.098428],
+        minZoom: 15,
+        maxZoom: 18
+    });
+    L.tileLayer('/assets/images/map-ww1/{z}/{x}/{y}.jpg').addTo(map);
+    map.setView([54.196239, -3.098428], 15);
+</script>
 
 </body>
 </html>

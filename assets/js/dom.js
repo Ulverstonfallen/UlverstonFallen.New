@@ -6,5 +6,5 @@ function ChangeHtmlTagClass(tagId, className) {
     }
 }
 export { ChangeHtmlTagClass };
-;
+
 //# sourceMappingURL=dom.js.map

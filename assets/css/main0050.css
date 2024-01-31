@@ -28,7 +28,7 @@ body {
 }
 
 /* Lobotomised Owl */
-body * + * {
+ body * + * {
     margin-top: 0.8em;
 }
 
@@ -55,7 +55,7 @@ li {
 
     body * + * {
         margin-top: 0.9em;
-    } 
+    } */
 
     h1 {
         font-size: 1.5rem;
@@ -121,22 +121,6 @@ a:active {
 }
 .visible {
     display: block;
-}
-.xxximage-map-center {
-    max-width: 90%;
-    margin: 2em auto 2em auto;
-    border: 0;
-    border: 1px solid red;
-    padding: 0;
-}
-
-.xxxmage-map-center .xxxleaflet-map {
-    text-align: center;
-    max-width: 100%;
-    max-height: 90%;
-    margin: 0 auto 0 auto;
-    border: 1px solid green;
-    padding: 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -646,16 +630,6 @@ a:active {
 }
 
 /* ------------------------------------------------------------------ */
-/*
-.main-area-article .map-ww1 {
-    margin: 0;
-    border: 0;
-    border: 1px solid red;
-    padding: 0;
-    height: 400px;
-} */
-
-/* ------------------------------------------------------------------ */
 
 .fallen-info {
     margin: 0 0 1em 0;
@@ -708,22 +682,26 @@ a:active {
         padding: 0 1em 0 0;
     }
 }
-
-
-
-
-.ww1-map {
-    width: 860px;
-    height: 597px;
-    max-width: 98%;
-    margin: 0 auto 0 auto;
-    border: 1px solid #29704a;
-    padding: 0;
-    z-index: 1000; 
-}
-
-.ww1-map .ww1-map-inner{
-    width: 100%;
-    height: auto;
-}
   
+
+/* ------------------------------------------------------------ */
+
+/* Lobotomised Owl must be turned off for the maps, if you don't
+   white lines will appear on the map. */
+.map-ww1 * + * {
+    margin-top: 0;
+}
+.map-ww1 {
+    width: 960px; 
+    height: 669px; 
+    max-width: 100%; 
+    margin: 1rem auto 1rem auto; 
+    border: 1px solid green; 
+    padding: 0; 
+    z-index: 1000;
+}
+
+.map-ww1-image {
+    width: 100%;
+    margin: 1rem 0 1rem 0; 
+}
