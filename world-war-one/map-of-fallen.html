@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +7,7 @@
     <link rel="icon" href="/assets/favicon.ico">
     <meta name="robots" content="noindex">
     <title>World War One Fallen</title>
-    <meta name="description" content="Map showing where most of the World War One fallen lived."/>
+    <meta name="description" content="1913 map of Ulverston showing where most of the people killed in action during World War One lived."/>
 </head>
 
 <body>
@@ -49,41 +45,29 @@
 
 <article class="main-area-article">
 <noscript>
-
     <h1>Where the Fallen Lived</h1>
- 
     <p>
         Because Java Script has been disabled, full map functionality is not available. If you enable Java Script 
-        for this website, it will become available. You will then be able to zoom the map below in and out and view 
-        the details of the fallen person living at a given address. Further information about Java Script is 
+        for this website, you will be able to zoom the map in and out and view 
+        the details of a fallen person living at a given address. Further information about Java Script is 
         available on our <a href="/info#java-script">info page</a>.
-    </p>
-    
-    <div>
-        <img class="map-ww1-image" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
-    </div>
-    
+    </p>  
+    <img class="map-ww1-no-js" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
 </noscript>
 
 <div id="map-ww1-not-available" class="hidden">
-
     <h1>Where the Fallen Lived</h1>
-    
     <p>
         Because you are using an old browser (such as Internet Explorer) full map functionality is not available. 
-        If you change to a modern browser (such as Chrome, Firefox or Edge), it will become available. You will then 
-        be able to zoom the map below in and out and view the details of the fallen person living at a given address. 
+        If you change to a modern browser (such as Chrome, Firefox or Edge), you will  
+        be able to zoom the map in and out and view the details of a fallen person living at a given address. 
         Further information about Java Script is available on our <a href="/info#java-script">info page</a>.
-    </p>
-    
-    <div>
-        <img class="map-ww1-image" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
-    </div>
-    
+    </p> 
+    <img class="map-ww1-no-js" src="/assets/images/ww1/ulverstonmap.1.0.jpg" alt="1913 Map of Ulverston" />
 </div>
 
 <div id="map-ww1-available" class="hidden">
-    <h1 id="where-the-fallen-of-ulverston-lived">Where the Fallen of Ulverston Lived</h1>
+    <h1 id="where-the-fallen-lived">Where the Fallen Lived</h1>
 
 <div id="map" class="map-ww1"></div>
 
@@ -113,38 +97,25 @@
 </div>
 
 <script nomodule>
-    window.nomodule = true;
-    eid = document.getElementById("map-ww1-not-available");
+    var eid = document.getElementById("map-ww1-not-available");
     if (eid != null)
     {
         eid.className = "visible";
     }
-
 </script>
    
+<div class="map-ww1-popup" id="mapPopups">
+    <div class='marker' id='map-mrk-1'><p><a id='map-url-1' href='/world-war-one/fallen/akister-john-pioneer'>Pioneer John Akister</a></p></div>
+    <div class='marker' id='map-mrk-2'><p><a id='map-url-2' href='/world-war-one/fallen/askew-albert-private'>Private Albert Askew</a></p></div>
+    <div class='marker' id='map-mrk-3'><p><a id='map-url-3' href='/world-war-one/fallen/athersmith-nelson-private'>Private Nelson Athersmith</a></p></div>
+    <div class='marker' id='map-mrk-5'><p><a id='map-url-5' href='/world-war-one/fallen/atkinson-isaac-private'>Private Isaac Atkinson</a></p></div>
+    <div class='marker' id='map-mrk-6'><p><a id='map-url-6' href='/world-war-one/fallen/atkinson-john-private'>Private John Atkinson</a></p></div>
+    <div class='marker' id='map-mrk-8'><p><a id='map-url-8' href='/world-war-one/fallen/balderstone-joseph-private'>Private Joseph Balderstone</a></p></div>
+     
+</div>
+
 <link rel="stylesheet" href="/assets/css/leaflet-1-9-4.css" />
-<script src="/assets/js/leaflet-1-9-4.js"></script>
-<script>
-    if (typeof window.nomodule ==="undefined") {
-        eid = document.getElementById("map-ww1-available");
-        if (eid != null)
-        {
-            eid.className = "visible";
-        }
-        var sw = L.latLng(54.188078, -3.118062);
-        var ne = L.latLng(54.204400, -3.078794);
-        var bounds = L.latLngBounds(sw, ne);
-        map = L.map('map', {
-            maxBounds: bounds, 
-            crs: L.CRS.EPSG3857,
-            centre: [54.196239, -3.098428],
-            minZoom: 15,
-            maxZoom: 18
-        });
-        L.tileLayer('/assets/images/map-ww1/{z}/{x}/{y}.jpg').addTo(map);
-        map.setView([54.196239, -3.098428], 15);
-    }
-</script>
+<script type="module" src=/assets/js/ww1-map-leaflet.js></script>        
 
 </body>
 </html>
