@@ -1,0 +1,183 @@
+.page-center {
+    margin: 0 auto 0 auto;
+    border: 0;
+    padding: 0;
+    width: 98%;
+}
+.page-center .text-below-title-1 {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.page-center .text-below-title-2 {
+    margin: 0.3em 0 0 0;
+    border: 0;
+    padding: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+@media screen and (min-width: 480px) {
+    .page-center {
+        width:90%;
+    }
+    .page-center .text-below-title-1 {
+        font-size: 1.3rem;
+    }
+    .page-center .text-below-title-2 {
+        font-size: 1.3rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .page-center {
+        width:70%;
+    }
+    .page-center .text-below-title-1 {
+        font-size: 1.4rem;
+    }
+    .page-center .text-below-title-2 {
+        font-size: 1.4rem;
+    }
+}
+
+.page-center h1 {
+    text-align: center;
+}
+.page-center h2 {
+    text-align: center;
+}
+.page-center h3 {
+    text-align: center;
+}
+.page-center h4 {
+    text-align: center;
+}
+.page-center h5 {
+    text-align: center;
+}
+.page-center h6 {
+    text-align: center;
+}
+.page-center p {
+    text-align: center;
+}
+
+.page-center p .image-landscape {
+    clear: both;
+    display: block;
+    text-align: center;
+    margin: 1.5em auto 1.5em auto;
+    border: 1px solid black;
+    padding: 0;
+    width: 75%;
+}
+
+.page-center p .image-portrait {
+    clear: both;
+    display: block;
+    text-align: center;
+    margin: 1.5em auto 1.5em auto;
+    border: 1px solid black;
+    padding: 0;
+    width: 60%;
+}
+
+@media screen and (min-width: 480px) {
+    .page-center p .image-portrait {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-center p .image-portrait {
+        width: 50%;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+.page-center-bottom {
+    margin: 1.5em 0 0 0;
+    width: 100%;
+}
+.page-center-bottom > p {    
+    line-height: 1.2;
+    margin-top: 0.1em;
+    font-size: 1.1rem;
+}
+@media screen and (min-width: 480px) {
+    .page-center-bottom p {   
+        line-height: 1.2;
+        margin-top: 0.1em;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .page-center-bottom p {   
+        line-height: 1.2;
+        margin-top: 0.1em;
+        font-size: 1.3rem;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+.page-center .title-top {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.page-center .title-top h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.page-center .title-top h2 {
+    font-size: 1.0rem;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.page-center .links-top {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.page-center .links-bottom {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+@media screen and (min-width: 480px) {
+    .page-center {
+        width:90%;
+    }
+    .page-center .title-top h1 {
+        font-size: 1.5rem;
+    }
+    .page-center .title-top h2 {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .page-center {
+        width:70%;
+    }
+    .page-center .title-top h1 {
+        font-size: 1.7rem;
+    }
+    .page-center .title-top h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+.page-center .fallen-info {
+    margin: 0 0 1em 0;
+    border: 0;
+    border-bottom: 1px solid #29704a;
+    padding: 0 0 2em 0;
+}

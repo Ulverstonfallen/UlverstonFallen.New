@@ -1,0 +1,549 @@
+:root {
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    border: 0;
+    padding: 0;
+    color: rgb(90, 90, 90);
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Lobotomised Owl - this causes problems when leaflet is used for a map. */
+body * + * {
+    margin-top: 0.5em;
+}
+
+
+.index-page-top {
+    text-align: center;
+    width: 80%;
+}
+
+
+.clear-both {
+    clear: both;
+}
+.text-centre {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+.font-size-1pt1 {
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.3rem;
+}
+h3 {
+    font-size: 1.1rem;
+}
+h4 {
+    font-size: 1.1rem;
+}
+p {
+    font-size: 1.2rem;
+}
+li {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        line-height: 1.3;
+    }
+    body * + * {
+        margin-top: 0.6em;
+    } 
+    h1 {
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1.35rem;
+    }
+    li {
+        font-size: 1.35rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        line-height: 1.4;
+    }
+
+    body * + * {
+        margin-top: 0.7em;
+    } 
+
+    h1 {
+        font-size: 1.9em;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    h4 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    li {
+        font-size: 1.5rem;
+    }
+}
+
+a:link {
+    color: #29704a;
+    text-decoration: none;
+}
+a:visited {
+    color:  #29704a;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff1a1a;
+    text-decoration: underline;
+}
+a:active {
+    color:  #29704a;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.1em;
+}
+
+ul > li {
+    margin: .5em 0 0 0;
+    padding: 0 0 0 0.15em;
+}
+
+@media screen and (min-width: 480px) {    
+    ul {
+        padding-left: 1.25em;
+    }
+}
+
+@media screen and (min-width: 768px) {    
+    ul {
+        padding-left: 1.5em;
+    }
+}
+
+ol {
+    list-style-type: number;
+    list-style-position: outside;
+    padding-left: 1.1em;
+}
+
+ol > li {
+    margin: .5em 0 0 0;
+    padding: 0 0 0 0.15em;
+}
+
+@media screen and (min-width: 480px) {    
+    ol {
+        padding-left: 1.25em;
+    }
+}
+
+@media screen and (min-width: 768px) {    
+    ol {
+        padding-left: 1.5em;
+    }
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 0.2em 0 0.2em;
+    border: 0;
+    padding: 0;
+}
+@media screen and (min-width: 480px) {
+    .container {
+        margin: 0 0.3em 0 0.3em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        margin: 0 0.4em 0 0.4em;
+    }
+}
+
+.container .header-area {
+    flex: 0 0 auto;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container .main-area {
+    flex: 1 0 auto;
+    max-width: 1000px;
+    margin: 0.8em auto 3em auto;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .footer-area {
+    flex: 0 0 auto;
+    margin: 0 0 2em 0;
+    border: 0;
+    border-top: 1px solid black;
+    padding: 0;
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.header-provisional {
+    color: blue;
+    font-weight: bold;
+    font-size: 1.0rem;
+    margin: 0;
+    border: 0;
+    padding: 0.25em 0 0 0;
+    text-align: center;
+}
+@media screen and (min-width: 480px) {    
+    .header-provisional {
+        color: green;
+        font-size: 1.1rem;
+    }
+}
+@media screen and (min-width: 768px) {  
+    .header-provisional {
+        color: red;
+        font-size: 1.2rem;
+    }
+}
+
+.header-fallen-message {
+    color: red;
+    font-size: 1.0rem;
+    margin: 0;
+    border: 0;
+    padding: 0.25em 0 0 0;
+    text-align: center;
+}
+@media screen and (min-width: 480px) {    
+    .header-fallen-message {
+        font-size: 1.1rem;
+    }
+}
+@media screen and (min-width: 768px) {  
+    .header-fallen-message {
+        font-size: 1.2rem;
+    }
+}
+
+/* ---------------------------------- */
+
+.header-figure {
+    display: block;
+    position: relative;
+    margin: 0 0 0 0;
+    border: 0;
+    padding: 0;
+}
+
+.header-figure > img {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+} 
+
+.header-figure > figcaption {
+    position: absolute; 
+    top: 10px;
+    left: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.header-figure > figcaption .header-title-black {
+    font-size: 1.3rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+}
+.header-figure > figcaption .header-title-poppy-red {
+    font-size: 1.3rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff1a1a;
+}
+
+@media screen and (min-width: 480px) {    
+    .header-figure > figcaption {
+        top: 10px;
+        left: 5px;
+    }
+    .header-figure > figcaption .header-title-black {
+        font-size: 1.65rem; 
+    }
+    .header-figure > figcaption .header-title-poppy-red {
+        font-size: 1.65rem; 
+    }
+}
+
+@media screen and (min-width: 768px) {    
+    .header-figure > figcaption {
+        top: 10px;
+        left: 5px;
+    }
+    .header-figure > figcaption .header-title-black {
+        font-size: 2.0rem; 
+    }
+    .header-figure > figcaption .header-title-poppy-red {
+        font-size: 2.0rem; 
+    }
+}
+
+/* ---------------------------------- */
+
+.header-nav {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header-nav > p {
+    flex: 0 0 auto;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    line-height: 1.25;
+    margin-top: 0.20em;
+    padding: 0 0.1em 0 0.1em;
+    
+}
+
+.header-nav > p .current {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    .header-nav > p {
+        margin-top: 0.25em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .header-nav > p {
+        margin-top: 0.3em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+
+/* ---------------------------------- */
+
+.header-nav2 {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    padding: 0 0.1em 0 0.1em;
+}
+
+.header-nav2 > p {
+    flex: 0 0 auto;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    line-height: 1.25;
+    margin-top: 0.20em;
+}
+.header-nav2 > p .current {
+    font-weight: bold;
+}
+@media screen and (min-width: 480px) {
+    .header-nav2 > p {
+        margin-top: 0.25em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .header-nav2 > p {
+        margin-top: 0.3em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.foot-text {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.foot-text > p {
+    font-size: 1.1rem;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+@media screen and (min-width: 480px) {
+    .foot-text > p {
+        font-size: 1.25rem;
+        margin: 0.15em 0 0 0;
+    }    
+}
+@media screen and (min-width: 768px) {
+    .foot-text > p {
+        font-size: 1.4rem;
+        margin: 0.2em 0 0 0;
+    } 
+}
+
+/* ---------------------------------- */
+
+.foot-nav-short {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-align: centre;
+}
+
+.foot-nav-short p {
+    flex: 0 0 auto; 
+    margin: 0;
+    border: 0;
+    padding: 0;
+    line-height: 1.25;
+    margin-top: 0.2em;
+    padding: 0 0.1em 0 0.1em;
+}
+
+.foot-nav-short p .current {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    .foot-nav-short {
+        display: none;
+    }
+    .foot-nav-short p {
+        margin-top: 0em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .foot-nav-short {
+        display: none;
+    }
+    .foot-nav-short p {
+        margin-top: 0em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+/* ---------------------------------- */
+
+.foot-nav-long {
+    display: none;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-align: centre;
+}
+
+.foot-nav-long p {
+    flex: 0 0 auto; 
+    margin: 0;
+    border: 0;
+    padding: 0;
+    line-height: 1.25;
+    margin-top: 0.2em;
+    padding: 0 0.1em 0 0.1em;
+}
+
+.foot-nav-long p .current {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    .foot-nav-long {
+        display: flex;
+    }
+    .foot-nav-long p {
+        margin-top: 0em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .foot-nav-long {
+        display: flex;
+}
+    .foot-nav-long {
+        margin-top: 0em;
+        padding: 0 0.2em 0 0.2em;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */

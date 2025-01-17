@@ -1,0 +1,133 @@
+
+.page-left {
+    margin: 0m auto 0 auto;
+    border: 0;
+    padding: 0;
+    width: 98%;
+}
+@media screen and (min-width: 480px) {
+    .page-left {
+        width:98%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .page-left {
+        width:100%;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+.page-left .float-image-left {
+    float: left;
+    margin: 0.3em 1em 0.25em 0;
+    border: 1px solid black;
+    padding: 0;
+    width: 40%;
+    max-width: 175px;
+}
+
+.page-left .float-image-right {
+    float: right;
+    margin: 0.3em 0 0.25em 1em;
+    border: 1px solid black;
+    padding: 0;
+    width: 40%;
+    max-width: 175px;
+}
+
+.page-left .image-center-landscape {
+    clear: both;
+    display: block;
+    text-align: center;
+    margin: 0.3em auto 0.25em auto;
+    border: 1px solid black;
+    padding: 0;
+    width: 90%;
+}
+
+.page-left .image-center-portrait {
+    clear: both;
+    display: block;
+    text-align: center;
+    margin: 0.3em auto 0.25em auto;
+    border: 1px solid black;
+    padding: 0;
+    width: 40%;
+}
+
+@media screen and (min-width: 480px) {
+    .page-left .float-image-left {
+        width: 40%;
+        max-width: 250px;
+    }
+    .page-left .float-image-right {
+        width: 40%;
+        max-width: 250px;
+    }
+    .page-left .image-center-landscape {
+        width: 80%;
+    }
+    .page-left .image-center-portrait {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-left .float-image-left {
+        width: 40%;
+        max-width: 250px;
+    }
+    .page-left .float-image-right {
+        width: 40%;
+        max-width: 250px;
+    }
+    .page-left .image-center-landscape {
+        width: 70%;
+    }
+    .page-left .image-center-portrait {
+        width: 30%;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+.page-left .index-page-top {
+    margin: 0 10% 0.25em 10%;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------ */
+
+.page-left .roll-of-honour {
+    display: flex;
+    flex-wrap: wrap;
+}
+.page-left .roll-of-honour .roll-of-honour-individual {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0.25em 0 0 0;
+    border: 0;
+    padding: 0 1em 0 0;
+}
+
+@media screen and (min-width: 250px) {
+    .page-left .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .page-left .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 33%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .page-left .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 25%;
+    }
+}
