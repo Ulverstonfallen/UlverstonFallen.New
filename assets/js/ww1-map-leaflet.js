@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let ne = L.latLng(_neLat, _neLng);
         let bounds = L.latLngBounds(sw, ne);
         let centre = L.latLng(_centreLat, _centreLng);
-        map = L.map('map', {
+        let map = L.map('map', {
             maxBounds: bounds,
             crs: _crs, 
             centre: centre,
