@@ -1,0 +1,146 @@
+﻿.fmap-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+.fmap-button {
+  color: white;
+  background: #29704a;
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin: 3px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem; 
+}
+
+.fmap-button:link {
+  color: white;
+  text-decoration: none; 
+}
+
+.fmap-button:visited {
+  color: white;
+  text-decoration: none; 
+}
+
+.fmap-button:hover {
+  color: white;
+  text-decoration: none; 
+}
+
+.fmap-button:active {
+  color: white;
+  text-decoration: none; 
+}
+
+.fmap-close {
+  right: 8px; 
+}
+
+@media (max-width: 768px) {
+  .fmap-button {
+    font-size: 1.2rem; 
+  }
+  .fmap-close {
+    width: 24px;
+    height: 24px; 
+  } 
+  }
+
+@media (max-width: 576px) {
+  .fmap-button {
+    font-size: 1.1rem; 
+  }
+  .fmap-close {
+    margin: 2px 0 0 0;
+    width: 22px;
+    height: 22px; 
+  } 
+}
+
+.fmap-form {
+  position: relative;
+  max-height: 98%;
+  overflow: auto;
+  width: 98%;
+  max-width: 720px;
+  margin: 2px auto 0 auto;
+  border: 2px solid #29704a;
+  border-radius: 12px;
+  padding: 0 8px 8px 8px;
+  background-color: white; 
+}
+
+@media (max-width: 768px) {
+  .fmap-form {
+    max-width: 470px; 
+  } 
+}
+
+@media (max-width: 576px) {
+  .fmap-form {
+    max-width: 370px; 
+  } 
+}
+
+.fallen {
+  display: block; 
+}
+
+.fallen .det {
+  max-width: 100%;
+  margin: 20px 0 0 0;
+  padding: 18px 0 0 18px;
+  background-color: white; 
+}
+
+.fallen .det .fields {
+  text-align: center; 
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.fallen .det .info {
+  text-align: center; 
+  margin: 20px 0 20px 0;
+  border: 0;
+  border-top: 1px solid #29704a;
+  padding: 20px 0 20px 0;
+}
+
+.fallen .det .noInfo {
+  text-align: center; 
+  margin: 40px 0 0 0;
+  border: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .fallen .det {
+    max-width: 100%;
+    min-height: 500px;
+    margin: 14px 0 0 0;
+    padding: 14px 0 0 14px; 
+  } 
+}
+
+@media (max-width: 576px) {
+  .fallen .det {
+    min-height: 100px;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0 0 0;
+    padding: 12px 0 0 12px; 
+  } 
+}

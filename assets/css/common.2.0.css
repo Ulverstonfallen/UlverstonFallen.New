@@ -45,6 +45,9 @@ h4 {
 p {
     font-size: 1.2rem;
 }
+.psmall {
+    font-size: 1.0rem;
+}
 li {
     font-size: 1.2rem;
 }
@@ -70,6 +73,9 @@ li {
     }
     p {
         font-size: 1.35rem;
+    }
+    .psmall {
+        font-size: 1.15rem;
     }
     li {
         font-size: 1.35rem;
@@ -99,6 +105,9 @@ li {
     }
     p {
         font-size: 1.5rem;
+    }
+    .psmall {
+        font-size: 1.3rem;
     }
     li {
         font-size: 1.5rem;

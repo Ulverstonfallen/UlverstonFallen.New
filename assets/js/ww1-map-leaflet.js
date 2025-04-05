@@ -1,5 +1,3 @@
-import * as L from "/assets/js/leaflet-src.esm.js";
-
 const markerInfoLat = 0;
 const markerInfoLng = 1;
 const markerInfoTitle = 2;
@@ -10,7 +8,7 @@ const popupTypeInternal = 1;
 
 var _filtered = false;
 var _popupType = 1
-var _popupLinkIsUrlPathPage = true;
+var _popupLinkIsUrlPathPage = false;
 var _markerInfo = [
     [54.196040, -3.092900, "Pioneer John Akister", 1],
     [54.199110, -3.098620, "Private Albert Askew", 2],
@@ -33,11 +31,13 @@ var _maxZoom = 18;
 var _tileLayer = '/assets/images/map-ww1/{z}/{x}/{y}.jpg';
 var _crs = L.CRS.EPSG3857;
 var _icon = L.icon({ iconUrl: '/assets/images/map-ww1/marker-all.2.png', iconSize: [20, 20], iconAnchor: [10, 10] });
+var map;
+
+WebsiteUlverstonFallen.AddDocumentLoadCompleteProcessing("/assets/html/dialog/ww1-filter-12.json")
 
 document.addEventListener('DOMContentLoaded', function () {
     try
     {
-        //alert('DOMContentLoaded - start');
         let eid;
         eid = document.getElementById("map-ww1-available"); // assumed to exist.
         eid.className = "visible";
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let ne = L.latLng(_neLat, _neLng);
         let bounds = L.latLngBounds(sw, ne);
         let centre = L.latLng(_centreLat, _centreLng);
-        let map = L.map('map', {
+        map = L.map('map', {
             maxBounds: bounds,
             crs: _crs, 
             centre: centre,
@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
         map.addLayer(markers);
-        //alert('DOMContentLoaded - end');
     }
     catch (err)
     {
@@ -109,6 +108,7 @@ function AddMarkerInternal(i, markers) {
         if (pxy == null) {
             return;
         }
+        
         let pup = L.popup();
         pup.setContent(pxy);
         let marker = L.marker([_markerInfo[i][markerInfoLat], _markerInfo[i][markerInfoLng]], { icon: _icon });
@@ -120,6 +120,9 @@ function AddMarkerInternal(i, markers) {
             if (pxy != null) {   
                 pxy.addEventListener('click', ShowDetail); 
             }
+        }
+        else
+        {
         }
     }
     catch (err)
@@ -134,7 +137,7 @@ function ShowDetail(e) {
     try {
         e.preventDefault();
         
-        let s = e.target.id.substring(8);
+                let s = e.target.id.substring(8);
         let id = ConvertStringToInteger(s);
         if (id === undefined) {
             return;
@@ -151,9 +154,8 @@ function ShowDetail(e) {
             return;
         }
 
-        //let dialog = Securso.ModalDialog.GetModalDialog('ajaxDetail');
-        //dialog.ShowWithAjaxDetail(_markerInfo[i][markerInfoTitle]);
-        alert("ShowDetail: [" + ind.toString() + "] " + _markerInfo[ind][markerInfoId] + "; " + _markerInfo[ind][markerInfoTitle]);
+        let dialog = Securso.ModalDialog.GetModalDialog('ajaxDetail');
+        dialog.ShowWithAjaxDetail(_markerInfo[ind][markerInfoId]);
         map.closePopup();
     }
     catch (err)

@@ -1,0 +1,45 @@
+{
+  "webSite": "ulverstonfallen.uk",
+
+  "variables": [
+    {
+      "name": "name",
+      "type": "name",
+      "trim": true,
+      "mandatory": true,
+      "maxLength": 128
+    },
+    {
+      "name": "emailAddress",
+      "type": "emailAddress",
+      "mandatory": true
+    },
+    {
+      "name": "phoneNumber",
+      "type": "phoneNumber",
+      "trim": true,
+      "mandatory": false
+    },
+    {
+      "name": "message",
+      "type": "message",
+      "mandatory": true,
+      "maxLength": 1000
+    }
+  ],
+
+  "waitDialog": [
+    "<div class=\"modal-wait\" id=\"waitDialog\">",
+    "    <div class=\"wait\">",
+    "        <div class=\"spinner\">",
+    "          <div class=\"mask\">",
+    "              <div class=\"masked-circle\"></div>",
+    "          </div>",
+    "      </div>",
+    "  </div>",
+    "</div>"
+  ],
+
+  "dialogs": [
+  ]
+}

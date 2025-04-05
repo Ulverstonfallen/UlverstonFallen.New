@@ -375,7 +375,8 @@ var Securso;
             set: function (url) {
                 url = url.trim();
                 if (url.length == 0)
-                    this._s_lUrl = "/securso/java-script-error";
+                    this._s_lUrl = "";
+                    //this._s_lUrl = "/securso/java-script-error";
                 else
                     this._s_lUrl = url;
             },
@@ -404,8 +405,13 @@ var Securso;
             configurable: true
         });
         Logger.LogError = function (state, message, location, error, info, aid) {
+            if (typeof this._s_lUrl == undefined)
+                return;
             if (this._s_lUrl == null)
                 return;
+            if (this._s_lurl == "")
+                return;
+            alert("Logger.LogError: " + this._s_lurl.toString());
             if (error == undefined)
                 return;
             var j = {
@@ -427,9 +433,14 @@ var Securso;
             req.send(JSON.stringify(j));
         };
         Logger.LogMessage = function (state, message, location, info, aid) {
+            if (typeof this._s_lUrl == undefined)
+                return;
             if (this._s_lUrl == null)
                 return;
-            var inf;
+            if (this._s_lurl == "")
+                return;
+            alert("Logger.LogMessage: " + this._s_lurl.toString());
+            var inf; 
             this._s_ste = state;
             if (info == null) {
                 inf = 'null';
@@ -453,7 +464,8 @@ var Securso;
         };
         Logger._s_sit = "unknown";
         Logger._s_ste = RuntimeState.OK;
-        Logger._s_lUrl = "/securso/java-script-error";
+        Logger._s_lUrl = "";
+        //Logger._s_lUrl = "/securso/java-script-error";
         Logger._s_eUrl = "/securso/unexpected-error-page";
         return Logger;
     }());
@@ -1978,6 +1990,7 @@ var Securso;
             throw new Error("The 'Show' method is not allowed for the dialog, use 'ShowWithInfo' instead: " + this.Name);
         };
         ModalDialogAjaxDetail.prototype.ShowWithAjaxDetail = function (urlAppend) {
+ 
             var _this = this;
             var url = this._bUrl + urlAppend;
             var req = new XMLHttpRequest();
