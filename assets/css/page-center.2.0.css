@@ -70,7 +70,7 @@
     margin: 1.5em auto 1.5em auto;
     border: 1px solid black;
     padding: 0;
-    width: 75%;
+    width: 90%;
 }
 
 .page-center p .image-portrait {
@@ -84,14 +84,20 @@
 }
 
 @media screen and (min-width: 480px) {
-    .page-center p .image-portrait {
-        width: 50%;
+    .page-center p .image-landscape {
+        width: 90%;
+    }
+        .page-center p .image-portrait {
+        width: 75%;
     }
 }
 
 @media screen and (min-width: 768px) {
+    .page-center p .image-landscape {
+        width: 90%;
+    }
     .page-center p .image-portrait {
-        width: 50%;
+        width: 75%;
     }
 }
 
